@@ -38,6 +38,8 @@ namespace Program
 					Console.Write($"{array[i, j]}\t");
 				}
 				Console.WriteLine();
+
+				
 			}
 
 			// Вывод суммы столбцов:

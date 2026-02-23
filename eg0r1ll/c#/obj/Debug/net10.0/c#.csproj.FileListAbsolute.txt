@@ -1,0 +1,15 @@
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/c#.GeneratedMSBuildEditorConfig.editorconfig
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/c#.AssemblyInfoInputs.cache
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/c#.AssemblyInfo.cs
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/c#.csproj.CoreCompileInputs.cache
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/c#.sourcelink.json
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/bin/Debug/net10.0/c#
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/bin/Debug/net10.0/c#.deps.json
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/bin/Debug/net10.0/c#.runtimeconfig.json
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/bin/Debug/net10.0/c#.dll
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/bin/Debug/net10.0/c#.pdb
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/c#.dll
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/refint/c#.dll
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/c#.pdb
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/c#.genruntimeconfig.cache
+/home/eg0r1ll/Desktop/test/eg0r1ll/c#/obj/Debug/net10.0/ref/c#.dll

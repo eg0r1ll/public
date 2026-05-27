@@ -65,7 +65,7 @@ def scan_ports(ports, temp_ip):
 def main():
 
     diap_ip = input("ip or diaposon(x.x.x. start end): ").split() # 192.168.0.1 / 192.168.0. 0 255
-    diap_port = input("port os diaposon(end start): ").split() # 100 / 10 50
+    diap_port = input("port or diaposon(end start): ").split() # 100 / 10 50
     
     if len(diap_port) == 2 or len(diap_port) == 1 and len(diap_ip) == 1 or len(diap_ip) == 3:
         print(diap_ip, diap_port)

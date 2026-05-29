@@ -1,3 +1,5 @@
+import config
+
 class Cell:
     def __init__(self, id, x, y, status = False):
         self.id = id
@@ -13,7 +15,8 @@ class Cell:
         print(self.id, self.sym_coord, self.status)
 
 
-
+    def draw(self):
+        pass
 
 
 class Field:
@@ -32,9 +35,9 @@ class Field:
 
     
 
-    def getCells(self):
-        for i in self.cells:
-            i.getInfo()
+    # def getCells(self):
+    #     for i in self.cells:
+    #         i.getInfo()
 
 
 
@@ -47,9 +50,9 @@ class Field:
         temp_string = ""
         for i in range(self.x_probels):
             if (i + 1) % 4 == 0:
-                temp_string += "+"
+                temp_string += config.crosshair
             else:
-                temp_string += "-"
+                temp_string += config.line
         print(temp_string)
 
     def _drawLine(self):
@@ -59,10 +62,15 @@ class Field:
                 print("#", end = "") 
 
             elif ((x + 1) / 4) % 1 == 0: # x=4n-1 (3, 7, 11, 15 ...); 4n=x+1; n=(x+1)/4 | определение id символа где должна располагаться перегородка
-                print("|", end = "")
+                print(config.partition, end = "")
 
             else:
                 print(" ", end = "")
+
+    def drawCell():
+        pass
+
+    # cell.draw()
 
     def draw(self):
         for y in range(self.y_probels): 
@@ -73,7 +81,6 @@ class Field:
             self._drawLine()
             print()
              
-
 
 
 
@@ -89,10 +96,10 @@ class Game:
 
 
 
-field = Field(10, 10)
+field = Field(3, 3)
 field.getInfo()
 field.draw()
-
+field._drawLine()
 
 
 # сделать координты (символьные) для каждой клетки

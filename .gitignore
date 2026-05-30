@@ -1,0 +1,10 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/nil/SnakeGame.cs/.gitattributes
+/nil/SnakeGame.cs/.gitignore
+/nil/SnakeGame.cs/Zmeika2.sln
+/.gitignore
+/nil/SnakeGame.cs/Zmeika2/Zmeika2.csproj
+/nil/SnakeGame.cs/Zmeika2.csproj

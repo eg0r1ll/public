@@ -1,4 +1,3 @@
-
 cross = 'X'
 nought = 'O'
 

@@ -3,12 +3,13 @@ import config
 
 
 class Cell:
-    def __init__(self, x, y, status = True):
+    def __init__(self, x, y, status = None):
         self.id = id
         self.x = x
         self.y = y
+        self.x_prob = (self.x + 3) / 4
         self.status = status
-        print(f"creating a cell with coordinates: ({x}, {y})")
+        print(f"creating a cell with coordinates: ({self.x_prob}, {y}); prob: ({x}, {y})")
 
     def __repr__(self):
         return f"{self.x}, {self.y}, {self.status}"
@@ -21,7 +22,7 @@ class Cell:
 
     def draw(self):
         if not self.status:
-            print('#', end='')
+            print(' ', end='')
             return
         if self.status:
             print(config.cross, end='')
@@ -102,11 +103,20 @@ class Field:
 
 
 
+
 class Player:
-    pass
+    def __init__(self, name, side, score):
+        self.name = name
+        self.side = side
+        self.score = score
+
+    def move(self, player):
+        pass
+
 
 
 
 class Game:
-    def move(self, player):
+    def __init__(self):
         pass
+

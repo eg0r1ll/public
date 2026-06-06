@@ -5,29 +5,49 @@ import config
 class Cell:
     def __init__(self, x, y, status = None):
         self.id = id
-        self.x = x
-        self.y = y
-        self.x_prob = (self.x + 3) / 4
+        self.x_prob = x
+        self.y_prob = y
+        self.y = y // 2  
+        self.x = int((x + 3) / 4 - 1)
         self.status = status
-        print(f"creating a cell with coordinates: ({self.x_prob}, {y}); prob: ({x}, {y})")
 
     def __repr__(self):
         return f"{self.x}, {self.y}, {self.status}"
 
-    def getCoord(self):
-        return (self.x ,)
 
     def getInfo(self):
-        print(f"cell: ({self.x}, {self.y}); status: {self.status}")
+        print(f"cell: coord=({self.x_prob}, {self.y_prob}), coord_prob=({self.x}, {self.y}); status: {self.status}")
+
 
     def draw(self):
-        if not self.status:
+        if self.status == None:
             print(' ', end='')
-            return
-        if self.status:
+        elif self.status:
             print(config.cross, end='')
         else:
             print(config.nought, end='')
+
+
+    def getCoord(self):
+        return (self.x, self.y)
+
+
+    def getProbCoord(self):
+        return (self.x_prob, self.y_prob)
+
+
+    def chekCoord(self, coord):
+        if coord == self.getCoord():
+            return True
+        else: 
+            return False
+
+
+    def changeFlag(self, player):
+        if player == 0:
+            self.status = False
+        else: 
+            self.status = True
 
 
 
@@ -65,9 +85,13 @@ class Field:
     def getInfo(self):
         print(f"{self.x}x{self.y} ({self.x_probels}x{self.y_probels}); win={self.win}; start_draw_point={self.start_draw}")
 
-    def getCells(self):
-        for cell in self.cells.values():
-            cell.getInfo()
+
+    def _getCells(self):        
+        return self.cells
+
+
+    def checkWin(self):
+        pass
 
     # отрисовка линии разделителя
     def _drawSeparation(self): 
@@ -89,6 +113,7 @@ class Field:
             else: # отрисовка пробелов
                 print(" ", end = "")
 
+
     def draw(self): # отрисовка поля
         for y in range(self.y_probels): 
             if y % 2 == 1:
@@ -98,25 +123,32 @@ class Field:
             print()
              
 
-    def checkWin(self):
-        pass
-
-
-
 
 class Player:
-    def __init__(self, name, side, score):
+    def __init__(self, name, side, field):
         self.name = name
         self.side = side
-        self.score = score
+        self.field = field
+        self.cells = Field._getCells(field)
 
-    def move(self, player):
-        pass
-
+    def move(self):
+        coord = tuple(map(int, input("coord:").split()))
+        for cell in self.cells.values():
+            if coord == cell.getCoord():
+                cell.changeFlag(self.side)
+                break
 
 
 
 class Game:
-    def __init__(self):
-        pass
+    def __init__(self, field, player1, player2):
+        self.field = field
+        self.p1 = player1
+        self.p2 = player2
 
+    def start(self):
+        while True:
+            self.field.draw()
+            self.p1.move()
+            self.field.draw()
+            self.p2.move()            
